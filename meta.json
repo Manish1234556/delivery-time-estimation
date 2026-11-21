@@ -1,0 +1,125 @@
+{
+  "features": [
+    "is_weekend",
+    "is_public_holiday",
+    "is_festive_season",
+    "num_stops",
+    "courier_age",
+    "courier_rating",
+    "courier_deliveries_completed",
+    "package_weight_kg",
+    "is_fragile",
+    "preparation_time_min",
+    "distance_km",
+    "traffic_score",
+    "stops_per_km",
+    "handling_score",
+    "weight_x_dist",
+    "bad_weather",
+    "weather_x_traffic",
+    "rush_hour",
+    "dist_x_traffic",
+    "pkg_x_traffic",
+    "pkg_x_route",
+    "dist_x_lowrating",
+    "courier_x_traffic",
+    "courier_x_pkg",
+    "zone_x_traffic",
+    "day_of_week",
+    "zone_type",
+    "traffic_level",
+    "weather",
+    "vehicle_type",
+    "package_type",
+    "package_size",
+    "distance_bucket",
+    "exp_band",
+    "meal_period"
+  ],
+  "ml_name": "XGBoost",
+  "best_overall_name": "XGBoost",
+  "best_overall": "ML",
+  "options": {
+    "zone_type": [
+      "Commercial",
+      "Mixed",
+      "Residential"
+    ],
+    "traffic_level": [
+      "High",
+      "Jam",
+      "Low",
+      "Medium"
+    ],
+    "weather": [
+      "Cloudy",
+      "Foggy",
+      "Rainy",
+      "Stormy",
+      "Sunny"
+    ],
+    "vehicle_type": [
+      "Bike",
+      "Car",
+      "Cycle",
+      "Scooter"
+    ],
+    "package_type": [
+      "Documents",
+      "Electronics",
+      "Food",
+      "Fragile",
+      "Grocery"
+    ],
+    "package_size": [
+      "Large",
+      "Medium",
+      "Small"
+    ]
+  },
+  "defaults": {
+    "num_stops": 1.0,
+    "courier_age": 37.0,
+    "courier_rating": 4.4,
+    "courier_experience_yrs": 5.6,
+    "courier_deliveries_completed": 2305.0,
+    "package_weight_kg": 2.41,
+    "preparation_time_min": 5.6,
+    "pickup_lat": 25.43527,
+    "pickup_lon": 81.84477,
+    "drop_lat": 25.43484,
+    "drop_lon": 81.84694,
+    "zone_type": "Residential",
+    "traffic_level": "Medium",
+    "weather": "Sunny",
+    "vehicle_type": "Bike",
+    "package_type": "Food",
+    "package_size": "Medium"
+  },
+  "metrics": [
+    {
+      "Model": "XGBoost",
+      "Test RMSE": 3.5626,
+      "Test MAE": 2.8308,
+      "Test R2": 0.9391
+    },
+    {
+      "Model": "ANN",
+      "Test RMSE": 3.7019,
+      "Test MAE": 2.8456,
+      "Test R2": 0.9343
+    },
+    {
+      "Model": "Linear Regression",
+      "Test RMSE": 4.0178,
+      "Test MAE": 3.0428,
+      "Test R2": 0.9226
+    },
+    {
+      "Model": "Random Forest",
+      "Test RMSE": 4.5634,
+      "Test MAE": 3.6021,
+      "Test R2": 0.9002
+    }
+  ]
+}
